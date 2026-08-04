@@ -22,32 +22,32 @@ export const config = {
       {
         id: "starters",
         items: [
-          { id: "meze_platter", price: "420", image: "/images/hero.png" },
-          { id: "calamari_fritti", price: "380", image: "/images/hero.png" },
-          { id: "grilled_halloumi", price: "290", image: "/images/hero.png" },
+          { id: "meze_platter", price: "420", image: "/images/menu/akdeniz-meze.webp" },
+          { id: "calamari_fritti", price: "380", image: "/images/menu/kalamar-tava.webp" },
+          { id: "grilled_halloumi", price: "290", image: "/images/menu/ızgara-helim.webp" },
         ],
       },
       {
         id: "salads",
         subtitleKey: "salads_note",
         items: [
-          { id: "mediterranean_breeze", price: "260", image: "/images/hero.png" },
-          { id: "burrata_caprese", price: "340", image: "/images/hero.png" },
+          { id: "mediterranean_breeze", price: "260", image: "/images/menu/akdeniz-salata.webp" },
+          { id: "burrata_caprese", price: "340", image: "/images/menu/burrata.webp" },
         ],
       },
       {
         id: "main_courses",
         items: [
-          { id: "grilled_sea_bass", price: "680", image: "/images/hero.png" },
-          { id: "mediterranean_lamb_chop", price: "750", image: "/images/hero.png" },
-          { id: "seafood_linguine", price: "590", image: "/images/hero.png" },
+          { id: "grilled_sea_bass", price: "680", image: "/images/menu/levrek-fileto.webp" },
+          { id: "mediterranean_lamb_chop", price: "750", image: "/images/menu/kuzu-pirzola.webp" },
+          { id: "seafood_linguine", price: "590", image: "/images/menu/linguine.webp" },
         ],
       },
       {
         id: "desserts",
         items: [
-          { id: "citrus_panna_cotta", price: "210", image: "/images/hero.png" },
-          { id: "baklava_ice_cream", price: "240", image: "/images/hero.png" },
+          { id: "citrus_panna_cotta", price: "210", image: "/images/menu/panna-cotta.webp" },
+          { id: "baklava_ice_cream", price: "240", image: "/images/menu/baklava.webp" },
         ],
       },
     ],
@@ -59,7 +59,7 @@ export default config;
 export const storyPolaroids = [
   {
     id: 1,
-    image: "/images/polaroid-1.jpg",
+    image: "/images/polaroids/taze-aromalar.webp",
     captionKey: "polaroid.1", // 👈 Hook yerine doğrudan key veriyoruz
     side: "left",
     topPosition: "8%",
@@ -70,7 +70,7 @@ export const storyPolaroids = [
   },
   {
     id: 2,
-    image: "/images/polaroid-2.jpg",
+    image: "/images/polaroids/lezzetler.webp",
     captionKey: "polaroid.2",
     side: "left",
     topPosition: "38%",
@@ -81,7 +81,7 @@ export const storyPolaroids = [
   },
   {
     id: 3,
-    image: "/images/polaroid-3.jpg",
+    image: "/images/polaroids/dining.webp",
     captionKey: "polaroid.3",
     side: "left",
     topPosition: "68%",
@@ -92,7 +92,7 @@ export const storyPolaroids = [
   },
   {
     id: 4,
-    image: "/images/polaroid-4.jpg",
+    image: "/images/polaroids/sunum.webp",
     captionKey: "polaroid.4",
     side: "right",
     topPosition: "12%",
@@ -103,7 +103,7 @@ export const storyPolaroids = [
   },
   {
     id: 5,
-    image: "/images/polaroid-5.jpg",
+    image: "/images/polaroids/chefs.webp",
     captionKey: "polaroid.5",
     side: "right",
     topPosition: "42%",
@@ -114,7 +114,7 @@ export const storyPolaroids = [
   },
   {
     id: 6,
-    image: "/images/polaroid-2.jpg",
+    image: "/images/polaroids/hatıra.webp",
     captionKey: "polaroid.6",
     side: "right",
     topPosition: "70%",
@@ -129,7 +129,7 @@ export const comments = [
   {
     id: 1,
     name: "Selin Yılmaz",
-    avatar: "https://i.pravatar.cc/150?img=1",
+    avatar: "images/avatars/avatar3.webp",
     rating: 5,
     date: "14/07/2026",
     commentKey: "comments.1" // i18n key veya doğrudan metin kullanabilirsin
@@ -137,7 +137,7 @@ export const comments = [
   {
     id: 2,
     name: "Emre Kaya",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    avatar: "images/avatars/avatar2.webp",
     rating: 5,
     date: "02/07/2026",
     commentKey: "comments.2"
@@ -145,7 +145,7 @@ export const comments = [
   {
     id: 3,
     name: "Sophia Martinez",
-    avatar: "https://i.pravatar.cc/150?img=5",
+    avatar: "images/avatars/avatar7.webp",
     rating: 5,
     date: "28/06/2026",
     commentKey: "comments.3"
@@ -153,7 +153,7 @@ export const comments = [
   {
     id: 4,
     name: "Caner Demir",
-    avatar: "https://i.pravatar.cc/150?img=33",
+    avatar: "images/avatars/avatar4.webp",
     rating: 4,
     date: "18/06/2026",
     commentKey: "comments.4"
@@ -161,7 +161,7 @@ export const comments = [
   {
     id: 5,
     name: "Ayşe Yılmaz",
-    avatar: "https://i.pravatar.cc/150?img=6",
+    avatar: "images/avatars/avatar6.webp",
     rating: 5,
     date: "10/06/2026",
     commentKey: "comments.5"
@@ -169,7 +169,7 @@ export const comments = [
   {
     id: 6,
     name: "Mehmet Kaya",
-    avatar: "https://i.pravatar.cc/150?img=7",
+    avatar: "images/avatars/avatar5.webp",
     rating: 5,
     date: "05/06/2026",
     commentKey: "comments.6"
@@ -177,7 +177,7 @@ export const comments = [
   {
     id: 7,
     name: "Elif Demir",
-    avatar: "https://i.pravatar.cc/150?img=8",
+    avatar: "images/avatars/avatar8.webp",
     rating: 4,
     date: "29/05/2026",
     commentKey: "comments.7"
@@ -185,7 +185,7 @@ export const comments = [
   {
     id: 8,
     name: "Ahmet Şahin",
-    avatar: "https://i.pravatar.cc/150?img=9",
+    avatar: "images/avatars/avatar1.webp",
     rating: 5,
     date: "22/05/2026",
     commentKey: "comments.8"

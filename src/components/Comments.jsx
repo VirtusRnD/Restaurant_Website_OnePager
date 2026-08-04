@@ -107,7 +107,7 @@ const Comments = () => {
       {/* 🪵 AHŞAP MASA ZEMİNE AYARI */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center scale-110"
-        style={{ backgroundImage: `url('/images/wooden_bg.jpg')` }}
+        style={{ backgroundImage: `url('/images/wooden_bg.webp')` }}
       />
       <div className="absolute inset-0 bg-black/20 transition-colors duration-500" />
 
@@ -262,7 +262,7 @@ const Comments = () => {
             style={{ 
               transformOrigin: "left center",
               transformStyle: "preserve-3d",
-              backgroundImage: `url('/images/leather.jpg')`
+              backgroundImage: `url('/images/leather.webp')`
             }}
             className="absolute -inset-0.5 w-[calc(100%+2px)] bg-cover bg-center rounded-xl shadow-2xl z-50 pointer-events-none flex items-center justify-center p-6"
           >
