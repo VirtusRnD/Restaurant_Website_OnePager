@@ -1,55 +1,109 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { config } from "../config";
+import { useTranslation } from "react-i18next";
+import { useConfig } from "../hooks/useConfig";
+
+// 👑 ANIMASYON VARYANTLARI
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
+  },
+};
 
 const Hero = () => {
   const { hero } = config;
+  const { t } = useTranslation();
+  const { upper } = useConfig();
+
+  // 👑 PARALLAX İÇİN SCROLL KONTROLÜ
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Sayfa aşağı kaydıkça arka plan resmini yavaşça y ekseninde kaydırır (0% -> 30%)
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section className="relative w-full h-[85vh] min-h-150 flex items-center">
-      {/* KATMAN 1: Arka Plan Görseli */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${hero.bgImage})` }}
+    <section 
+      ref={targetRef}
+      id="hero" 
+      className="relative w-full h-screen min-h-150 flex items-center overflow-hidden"
+    >
+      {/* KATMAN 1: Arka Plan Görseli (Parallax + Zoom-In Animasyonlu) */}
+      <motion.div
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.4, ease: "easeOut" }}
+        style={{ 
+          backgroundImage: `url(images/hero2.png)`,
+          y: yBg // 👑 Kaydırma hızı içeriğe göre daha yavaş hareket eder
+        }}
+        className="absolute -top-[10%] inset-x-0 w-full h-[120%] bg-cover bg-center pointer-events-none"
       />
 
-      {/* KATMAN 2: Sol Taraf Karartma (Gradient Overlay) 
-          Bu sayede görsel ne kadar parlak olursa olsun soldaki beyaz yazılar hep okunur kalır.
-      */}
-      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent" />
+      {/* KATMAN 2: Sol Taraf Karartma (Gradient Overlay) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/50 to-transparent z-1" />
 
-      {/* KATMAN 3: İçerik */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex flex-col justify-center">
-        <div className="max-w-xl">
-          {/* Başlık (Serif Font) */}
-          <h1 className="font-serif text-brand-cream flex flex-col gap-1">
-            <span className="text-6xl md:text-7xl lg:text-8xl tracking-widest uppercase font-light">
-              {hero.titleMain}
-            </span>
-            <span className="text-5xl md:text-6xl lg:text-7xl italic">
-              {hero.titleItalic}
-            </span>
+      {/* KATMAN 3: İçerik (Sıralı Fade-In Animasyonu) */}
+      <div className="relative z-10 w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col justify-center overflow-hidden">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-xl w-full"
+        >
+          {/* Başlık */}
+          <h1 className="font-serif text-text flex flex-col gap-1">
+            <motion.span 
+              variants={itemVariants}
+              className="text-accent text-4xl sm:text-6xl md:text-7xl lg:text-8x tracking-wider sm:tracking-widest uppercase font-light leading-tightest"
+            >
+              {upper(t("hero.title", "Error"))}
+            </motion.span>
+            
+            <motion.span 
+              variants={itemVariants}
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tightest"
+            >
+              {t("hero.subtitle", "Error")}
+            </motion.span>
           </h1>
 
-          {/* Zarif Ayırıcı Çizgi (Görseldeki "Savor the Moment" altındaki detay) */}
-          <div className="flex items-center gap-3 my-6 opacity-60">
-            <div className="h-px w-10 bg-brand-cream"></div>
-            <div className="w-1.5 h-1.5 rotate-45 bg-brand-cream"></div>
-            <div className="h-px w-10 bg-brand-cream"></div>
-          </div>
-
-          {/* Açıklama Metni (Sans-serif Font) */}
-          <p className="font-sans text-brand-cream/90 text-sm md:text-base leading-relaxed mb-10 max-w-md font-light">
-            {hero.description}
-          </p>
-
-          {/* Aksiyon Butonu (CTA) */}
-          <a
-            href={hero.ctaLink}
-            className="inline-block bg-brand-olive hover:bg-brand-olive-light text-brand-cream px-8 py-4 font-sans text-xs tracking-[0.2em] uppercase transition-colors duration-300"
+          {/* Zarif Ayırıcı Çizgi */}
+          <motion.div 
+            variants={itemVariants}
+            className="flex items-center gap-3 my-5 sm:my-6 opacity-60"
           >
-            {hero.ctaText}
-          </a>
-        </div>
+            <div className="h-px w-96 sm:w-72 bg-muted"></div>
+            <div className="w-1.5 h-1.5 rotate-45 bg-muted"></div>
+            <div className="h-px w-96 sm:w-72 bg-muted"></div>
+          </motion.div>
+
+          {/* Açıklama Metni */}
+          <motion.p 
+            variants={itemVariants}
+            className="font-sans text-text/90 text-xs sm:text-sm md:text-base leading-relaxed mb-8 sm:mb-10 max-w-lg"
+          >
+            {t("hero.tagline", "Error")}
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
