@@ -69,7 +69,7 @@ const Comments = () => {
           <img
             src={comment.avatar}
             alt={comment.name}
-            className="w-7 h-8 sm:w-9 sm:h-9 rounded-full object-cover border border-stone-300 shadow-xs"
+            className="w-7 h-8 sm:w-9 sm:h-9 rounded-full object-cover shadow-xs"
           />
           <div>
             <h3 className="font-serif font-bold text-stone-900 text-xs sm:text-sm">
@@ -102,7 +102,7 @@ const Comments = () => {
     <section
       ref={sectionRef}
       id="comments"
-      className="relative w-full py-20 md:py-32 px-4 contain-layout transition-colors duration-500 overflow-hidden flex flex-col items-center justify-center min-h-[850px]"
+      className="relative w-full py-2 md:py-10 px-4 contain-layout transition-colors duration-500 overflow-hidden flex flex-col items-center justify-center min-h-[650px]"
     >
       {/* 🪵 AHŞAP MASA ZEMİNE AYARI */}
       <div
@@ -111,20 +111,20 @@ const Comments = () => {
       />
       <div className="absolute inset-0 bg-black/20 transition-colors duration-500" />
 
-      {/* 👑 BAŞLIK */}
+      {/* 👑 BG-PRIMARY ARKA PLANLI KART BAŞLIK */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 text-center mb-8 md:mb-12"
+        className="relative z-10 text-center mb-8 md:mb-12 bg-primary px-8 py-4 shadow-xl rounded-sm flex flex-col items-center max-w-xs sm:max-w-md"
       >
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold pl-[0.2em] tracking-[0.2em] text-accent uppercase drop-shadow-md">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold pl-[0.15em] tracking-[0.2em] text-accent uppercase leading-tight">
           {upper(t("commentsPage.title", "YORUMLAR"))}
         </h2>
-        <div className="flex items-center justify-center gap-3 mt-3 opacity-80">
-          <div className="h-px w-8 md:w-16 bg-stone-300"></div>
+        <div className="flex items-center justify-center gap-3 mt-2">
+          <div className="h-px w-8 md:w-12 bg-muted"></div>
           <div className="w-1.5 h-1.5 rotate-45 bg-accent"></div>
-          <div className="h-px w-8 md:w-16 bg-stone-300"></div>
+          <div className="h-px w-8 md:w-12 bg-muted"></div>
         </div>
       </motion.div>
 
@@ -254,7 +254,7 @@ const Comments = () => {
             </div>
           )}
 
-          {/* 📖 AHŞAP / DERİ KAPAK (DIŞ ÇERÇEVEYE DE DERİ DOKUSU VERİLDİ) */}
+          {/* 📖 AHŞAP / DERİ KAPAK */}
           <motion.div
             initial={{ rotateY: 0 }}
             animate={{ rotateY: isOpened ? -180 : 0 }}
