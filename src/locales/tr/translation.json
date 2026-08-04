@@ -1,0 +1,128 @@
+{
+  "common": {
+    "explore": "Keşfet",
+    "book": "Rezerv",
+    "booking": "Rezervasyon",
+    "book_now": "Rezervasyon Yap",
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "menu": "Menü",
+    "contact": "İletişim",
+    "contact_us": "Bize Ulaşın",
+    "contact_form": "İletişim Formu",
+    "name_surname": "Ad Soyad",
+    "phone_number": "Telefon Numarası",
+    "message": "Mesaj",
+    "your_message": "Mesajınız",
+    "send": "Gönder",
+    "email_adress": "E-posta Adresi",
+    "call": "Ara",
+    "email": "E-posta",
+    "adress": "Adres",
+    "for_questions": "Sorularınız İçin",
+    "virtualtour": "360 Sanal Tur",
+    "name_placeholder": "Adınız ve soyadınız...",
+    "working_hours": "Çalışma Saatleri",
+    "allrightsreserved": "Tüm hakları saklıdır."
+  },
+  "brandname": "Akdeniz Restoran",
+  "webTitle": "Akdeniz Restoran",
+  "hero": {
+    "title": "Akdenizden",
+    "subtitle": "Tabağınıza",
+    "tagline": "Akdeniz mutfağının özenle seçilmiş ve harika yorumlanmış sunumu"
+  },
+  "menuPage": {
+  "title": "MENÜ",
+  "categories": {
+    "starters": "BAŞLANGIÇLAR & MEZELER",
+    "salads": "SALATALAR",
+    "main_courses": "ANA YEMEKLER",
+    "desserts": "TATLI & İKRAMLAR"
+  },
+  "subtitles": {
+    "salads_note": "Tüm salatalarımız sızma zeytinyağı ve taze tarladan toplanan yeşilliklerle hazırlanmaktadır."
+  },
+  "items": {
+    "meze_platter": {
+      "title": "AKDENİZ MEZE TABAĞI",
+      "description": "Humus, köz patlıcan mutabbel, fava, muhammara ve taze tırnak pide eşliğinde."
+    },
+    "calamari_fritti": {
+      "title": "ÇITIR KALAMAR TAVA",
+      "description": "Özel baharatlı un ile kızartılmış kalamar halkaları, taze otlu tarator sos ve limon dilimleri ile."
+    },
+    "grilled_halloumi": {
+      "title": "IZGARA HELİM PEYNİRİ",
+      "description": "Közlenmiş domates, taze fesleğen ve zeytinyağlı nar ekşisi sosu ile servis edilir."
+    },
+    "mediterranean_breeze": {
+      "title": "AKDENİZ RÜZGARI SALATASI",
+      "description": "Taze Akdeniz yeşillikleri, çeri domates, ezine peyniri, ceviz, kalamata zeytin ve fesleğenli vinaigrette sos."
+    },
+    "burrata_caprese": {
+      "title": "Taze Burrata & İncirli Salata",
+      "description": "İtalyan burrata peyniri, fırınlanmış taze incir, roka yaprakları ve balzamik çektirmesi."
+    },
+    "grilled_sea_bass": {
+      "title": "IZGARA LEVREK FİLETO",
+      "description": "Buharda pişmiş mevsim sebzeleri, fırınlanmış taze patates ve limonlu kapari sosu eşliğinde."
+    },
+    "mediterranean_lamb_chop": {
+      "title": "OTLU KUZU PIRZOLA",
+      "description": "Taze biberiye ve sarımsak ile marine edilmiş kuzu pirzola, safranlı kuskus ve ızgara sebzeler ile."
+    },
+    "seafood_linguine": {
+      "title": "DENİZ ÜRÜNLÜ LINGUINE",
+      "description": "Karides, kalamar, midye, taze sarımsak, çeri domates ve taze fesleğenli zeytinyağı soslu makarna."
+    },
+    "citrus_panna_cotta": {
+      "title": "NARENCİYE PANNA COTTA",
+      "description": "Bodrum mandalinası ve portakal sosu ile tatlandırılmış geleneksel İtalyan tatlısı."
+    },
+    "baklava_ice_cream": {
+      "title": "ÇITIR ÇITIR ÇITIR BAKLAVA",
+      "description": "Antep fıstıklı çıtır baklava yufkaları arasında keçi sütlü dondurma."
+    }
+  }
+},
+  "aboutPage": {
+      "title": "Hikayemiz",
+      "text": "1930'da büyüklerimiz tarafından seyyar bir işletme olarak başlayan ve bugün büyük bir restoran haline gelen Akdeniz Restoran, aynı tutku ve lezzet ile misafirlerini ağırlamaktan mutluluk duyuyor. 1930'da büyüklerimiz tarafından seyyar bir işletme olarak başlayan ve bugün büyük bir restoran haline gelen Akdeniz Restoran, aynı tutku ve lezzet ile misafirlerini ağırlamaktan mutluluk duyuyor."
+    
+  },
+  "polaroid":{
+    "1": "Taze Aromalar",
+    "2": "Eşsiz Lezzetler",
+    "3": "Sıcak Atmosfer",
+    "4": "Özel Sunumlar",
+    "5": "Deneyimli Şefler",
+    "6": "Unutulmaz Anlar"
+  },
+  "commentsPage": {
+    "title": "YORUMLAR",
+    "bookTitle": "GÖRÜŞLERİNİZ",
+    "bookSubtitle": "Değerli misafirlerimizin kaleminden..."
+  },
+  "comments": {
+    "1": "Her şey harika bir lezzet deneyimiydi ve ortam romantik bir akşam için mükemmeldi.",
+    "2": "Akdeniz'e doğrudan taşınmış harika bir mutfak deneyimi.",
+    "3": "Hizmet mükemmeldi ve yemekler güzel sunuldu.",
+    "4": "Taze malzemeler ve lezzetli yemekler ile harika bir akşam yemeği deneyimi.",
+    "5": "Akdeniz Restoran, lezzetli yemekler ve harika bir atmosfer sunuyor. Kesinlikle tavsiye ederim.",
+    "6": "Akdeniz Restoran, lezzetli yemekler ve harika bir atmosfer sunuyor. Kesinlikle tavsiye ederim.",
+    "7": "Hizmet mükemmeldi ve yemekler güzel sunuldu.",
+    "8": "Akdeniz Restoran, lezzetli yemekler ve harika bir atmosfer sunuyor. Kesinlikle tavsiye ederim."
+  },
+  "contact":{
+    "title": "İletişim & Rezervasyon",
+    "tagline": "Sorularınız, özel organizasyon talepleriniz veya lezzetli bir akşam için bizimle iletişime geçin.",
+    "workingdays": "Pazartesi - Pazar",
+    "workinghours": "11:00 - 23:00"
+  },
+  "footer": {
+    "tagline": "Akdeniz'in taze aromaları ve modern dokunuşlarıyla hazırlanan eşsiz lezzet yolculuğuna davetlisiniz."
+    ,"quickLinks": "Hızlı Bağlantılar",
+    "copyright": "© 2026 Akdeniz Restoran. Tüm hakları saklıdır."
+  }
+}

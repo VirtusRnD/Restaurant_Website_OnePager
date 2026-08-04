@@ -1,0 +1,128 @@
+{
+  "common": {
+    "explore": "Explore",
+    "book": "Book",
+    "booking": "Booking",
+    "book_now": "Book Now",
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "contact": "Contact",
+    "contact_us": "Contact Us",
+    "contact_form": "Contact Form",
+    "name_surname": "Name Surname",
+    "phone_number": "Phone Number",
+    "message": "Message",
+    "your_message": "Your message",
+    "send": "Send",
+    "email_adress": "E-mail Adress",
+    "call": "Call",
+    "email": "E-mail",
+    "adress": "Adress",
+    "for_questions": "For Questions",
+    "virtualtour": "360 Virtual Tour",
+    "name_placeholder": "Your Full Name...",
+    "working_hours": "Working Hours",
+    "allrightsreserved": "All rights reserved."
+  },
+  "brandname": "Akdeniz Restoran",
+  "webTitle": "Akdeniz Restoran",
+  "hero": {
+    "title": "From the Mediterranean",
+    "subtitle": "To Your Plate",
+    "tagline": "A carefully curated and beautifully interpreted presentation of Mediterranean cuisine"
+  },
+  "menuPage": {
+  "title": "MENU",
+  "categories": {
+    "starters": "STARTERS & MEZZES",
+    "salads": "FRESH SALADS",
+    "main_courses": "MAIN COURSES",
+    "desserts": "DESSERTS"
+  },
+  "subtitles": {
+    "salads_note": "All our salads are dressed with cold-pressed extra virgin olive oil and fresh farm herbs."
+  },
+  "items": {
+    "meze_platter": {
+      "title": "MEDITERRANEAN MEZE SELECTION",
+      "description": "Hummus, roasted eggplant mutabbal, fava bean dip, muhammara, served with warm flatbread."
+    },
+    "calamari_fritti": {
+      "title": "CRISPY CALAMARI FRITTI",
+      "description": "Lightly battered squid rings served with homemade herb tarator dip and fresh lemon wedges."
+    },
+    "grilled_halloumi": {
+      "title": "CHAR-GRILLED HALLOUMI",
+      "description": "Served with roasted vine tomatoes, fresh basil leaves, and pomegranate reduction."
+    },
+    "mediterranean_breeze": {
+      "title": "MEDITERRANEAN BREEZE SALAD",
+      "description": "Fresh Mediterranean greens, cherry tomatoes, aged feta cheese, walnuts, Kalamata olives, and basil vinaigrette."
+    },
+    "burrata_caprese": {
+      "title": "BURRATA & FRESH FIG SALAD",
+      "description": "Creamy Italian burrata cheese, roasted fresh figs, wild arugula, and glaze balsamic."
+    },
+    "grilled_sea_bass": {
+      "title": "GRILLED SEA BASS FILLET",
+      "description": "Served with steamed seasonal vegetables, roasted baby potatoes, and lemon caper emulsion."
+    },
+    "mediterranean_lamb_chop": {
+      "title": "HERB-CRUSTED LAMB CHOPS",
+      "description": "Marinated with fresh rosemary and garlic, served with saffron couscous and grilled vegetables."
+    },
+    "seafood_linguine": {
+      "title": "SEAFOOD LINGUINE",
+      "description": "Artisanal linguine pasta with prawns, calamari, mussels, fresh garlic, cherry tomatoes, and extra virgin olive oil."
+    },
+    "citrus_panna_cotta": {
+      "title": "CITRUS PANNA COTTA",
+      "description": "Classic Italian dessert infused with local mandarin and orange reduction."
+    },
+    "baklava_ice_cream": {
+      "title": "CRISPY BAKLAVA & ICE CREAM",
+      "description": "Layers of crispy pistachio baklava pastry served with authentic goat milk ice cream."
+    }
+  }
+},
+  "aboutPage": {
+      "title": "Our Story",
+      "text": "Akdeniz Restaurant, which began as a mobile business run by our elders in 1930 and has since grown into a large restaurant, is delighted to welcome its guests with the same passion and flavor. Akdeniz Restaurant, which began as a mobile business run by our elders in 1930 and has since grown into a large restaurant, is delighted to welcome its guests with the same passion and flavor."
+
+  },
+  "polaroid":{
+    "1": "Fresh Aromas",
+    "2": "Unique Flavors",
+    "3": "Warm Atmosphere",
+    "4": "Special Presentations",
+    "5": "Experienced Chefs",
+    "6": "Unforgettable Moments"
+  },
+  "commentsPage": {
+    "title": "COMMENTS",
+    "bookTitle": "YOUR FEEDBACK",
+    "bookSubtitle": "From our valued guests..."
+  },
+  "comments": {
+    "1": "Everything was a wonderful taste experience and the atmosphere was perfect for a romantic evening.",
+    "2": "A fantastic kitchen experience directly from the Mediterranean.",
+    "3": "The service was excellent and the dishes were beautifully presented.",
+    "4": "The flavors were fresh and the ingredients were of high quality.",
+    "5": "A perfect place for a special occasion or a casual dinner with friends.",
+    "6": "The desserts were delicious and the coffee was excellent.",
+    "7": "The staff was friendly and attentive, making us feel welcome.",
+    "8": "The restaurant has a warm and inviting atmosphere, perfect for a relaxing evening."
+  },
+  "contact": {
+    "title": "Contact & Reservation",
+    "tagline": "For any questions, special event requests, or to plan a delicious dinner, please contact us.",
+    "workingdays": "Monday - Sunday",
+    "workinghours": "11:00 - 23:00"
+  },
+  "footer": {
+    "tagline": "You are invited to a unique culinary journey prepared with the fresh aromas of the Mediterranean and modern touches."
+    ,"quickLinks": "Quick Links",
+    "copyright": "© 2026 Akdeniz Restoran. All rights reserved."
+  }
+}
