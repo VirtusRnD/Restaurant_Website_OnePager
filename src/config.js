@@ -22,32 +22,32 @@ export const config = {
       {
         id: "starters",
         items: [
-          { id: "meze_platter", price: "420", image: "/images/hero.png" },
-          { id: "calamari_fritti", price: "380", image: "/images/hero.png" },
-          { id: "grilled_halloumi", price: "290", image: "/images/hero.png" },
+          { id: "meze_platter", price: "420", image: "/images/hero.webp" },
+          { id: "calamari_fritti", price: "380", image: "/images/hero.webp" },
+          { id: "grilled_halloumi", price: "290", image: "/images/hero.webp" },
         ],
       },
       {
         id: "salads",
         subtitleKey: "salads_note",
         items: [
-          { id: "mediterranean_breeze", price: "260", image: "/images/hero.png" },
-          { id: "burrata_caprese", price: "340", image: "/images/hero.png" },
+          { id: "mediterranean_breeze", price: "260", image: "/images/hero.webp" },
+          { id: "burrata_caprese", price: "340", image: "/images/hero.webp" },
         ],
       },
       {
         id: "main_courses",
         items: [
-          { id: "grilled_sea_bass", price: "680", image: "/images/hero.png" },
-          { id: "mediterranean_lamb_chop", price: "750", image: "/images/hero.png" },
-          { id: "seafood_linguine", price: "590", image: "/images/hero.png" },
+          { id: "grilled_sea_bass", price: "680", image: "/images/hero.webp" },
+          { id: "mediterranean_lamb_chop", price: "750", image: "/images/hero.webp" },
+          { id: "seafood_linguine", price: "590", image: "/images/hero.webp" },
         ],
       },
       {
         id: "desserts",
         items: [
-          { id: "citrus_panna_cotta", price: "210", image: "/images/hero.png" },
-          { id: "baklava_ice_cream", price: "240", image: "/images/hero.png" },
+          { id: "citrus_panna_cotta", price: "210", image: "/images/hero.webp" },
+          { id: "baklava_ice_cream", price: "240", image: "/images/hero.webp" },
         ],
       },
     ],

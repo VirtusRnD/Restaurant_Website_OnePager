@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { IoLocationOutline, IoTimeOutline, IoCallOutline, IoMailOutline, IoPaperPlaneOutline } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
 import { useConfig } from '../hooks/useConfig';
+import { submitForm } from "../lib/submitForm";
 
 // 👑 ANIMASYON VARYANTLARI
 const containerVariants = {
@@ -27,7 +28,7 @@ const itemVariants = {
 
 const Contact = () => {
   const { t } = useTranslation();
-  const { config, upper } = useConfig();
+  const { currentConfig: config, upper } = useConfig(); // the hook exports currentConfig, so config was undefined before
 
   // Scroll ve InView Referansı
   const sectionRef = useRef(null);
@@ -40,7 +41,7 @@ const Contact = () => {
     phone: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | mailto | error
 
   // Form input değişim takibi
   const handleChange = (e) => {
@@ -48,14 +49,14 @@ const Contact = () => {
   };
 
   // Form gönderme işleyici
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form verileri:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    }, 4000);
+    setStatus("sending");
+    try {
+      setStatus(await submitForm(formData, { email: config?.contact?.email, subject: t("contact.title") }));
+    } catch {
+      setStatus("error");
+    }
   };
 
   // Google Maps Embed URL
@@ -169,13 +170,13 @@ const Contact = () => {
               {upper(t("common.contact_us"))}
             </h3>
 
-            {isSubmitted ? (
+            {status === "sent" || status === "mailto" ? (
               <motion.div 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 className="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 p-4 rounded-xl text-center font-medium text-sm my-8"
               >
-                🎉 {t("contact.successMessage", "Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.")}
+                🎉 {t(status === "sent" ? "contact.successMessage" : "contact.mailtoMessage")}
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -245,8 +246,12 @@ const Contact = () => {
                 </div>
 
                 {/* GÖNDER BUTONU */}
+                {status === "error" && (
+                  <p role="alert" className="text-red-500 text-sm font-medium">{t("contact.errorMessage")}</p>
+                )}
                 <button
                   type="submit"
+                  disabled={status === "sending"}
                   className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-3.5 px-6 rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider text-sm mt-2"
                 >
                   <IoPaperPlaneOutline size={18} />

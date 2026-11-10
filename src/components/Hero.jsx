@@ -52,7 +52,7 @@ const Hero = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.4, ease: "easeOut" }}
         style={{ 
-          backgroundImage: `url(images/hero2.png)`,
+          backgroundImage: `url(images/hero2.webp)`,
           y: yBg // 👑 Kaydırma hızı içeriğe göre daha yavaş hareket eder
         }}
         className="absolute -top-[10%] inset-x-0 w-full h-[120%] bg-cover bg-center pointer-events-none"
